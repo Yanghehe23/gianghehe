@@ -68,7 +68,7 @@
                 <!-- Hình minh họa Chibi góc phải -->
                 <div class="z-10 flex-shrink-0">
                     <div class="w-24 h-24 bg-white/20 rounded-2xl p-1 backdrop-blur-sm border border-white/40 shadow-inner flex items-center justify-center">
-                        <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true">
+                        <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true" alt="HeHe">
                     </div>
                 </div>
                 <!-- Hiệu ứng trang trí mờ phía sau -->
@@ -78,12 +78,11 @@
             <!-- HÀNG 3 THẺ CHỨC NĂNG -->
             <div class="grid grid-cols-3 gap-3">
                 
-                <!-- 1. Thẻ QR Donate -->
+                <!-- 1. Thẻ QR Donate (Đã gắn sự kiện click mở popup phóng to) -->
                 <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform">
                     <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">QR Donate đây ạ!</h3>
-                    <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center">
-                        <!-- Placeholder QR Code kèm logo có sẵn -->
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png">
+                    <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" onclick="openQRModal()" title="Bấm để phóng to mã QR">
+                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate">
                     </div>
                     <div class="flex items-center justify-center space-x-1.5 mt-2 text-[10px] font-bold text-slate-500">
                         <span class="text-red-600 tracking-tighter">VIETQR</span>
@@ -95,7 +94,7 @@
                 <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('PNG Mode')">
                     <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Png Mode</h3>
                     <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png">
+                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png" alt="Png Mode">
                     </div>
                     <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
                 </div>
@@ -104,7 +103,7 @@
                 <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('Model Mode')">
                     <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Model Mode</h3>
                     <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png">
+                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png" alt="Model Mode">
                     </div>
                     <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
                 </div>
@@ -149,24 +148,37 @@
         <!-- FOOTER SOCIAL LINKS -->
         <footer class="mt-6 text-center text-xs text-purple-900/70 font-medium">
             <div class="flex justify-center space-x-4 mb-2">
-                <a href="https://www.facebook.com/GiangHeHe23/" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-twitch"></i></a>
-                <a href="https://www.youtube.com/@GiangHeHe23" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://discord.com/invite/m4e9fHmEer" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.facebook.com/GiangHeHe23/" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://www.youtube.com/@GiangHeHe23" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.com/invite/m4e9fHmEer" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-discord"></i></a>
             </div>
             <p>© 2026 Giang HeHe. Made with 💜</p>
         </footer>
 
     </div>
 
-    <!-- HỘP THÔNG BÁO TÙY CHỈNH (THAY THẾ ALERT) -->
+    <!-- BỘ NÚT ZOOM PHÓNG TO / THU NHỎ MÀN HÌNH -->
+    <div class="fixed bottom-4 right-4 z-50 flex items-center bg-white/90 backdrop-blur-md border border-purple-200 shadow-lg rounded-full p-1.5 space-x-1">
+        <button onclick="zoomOut()" title="Thu nhỏ" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-full transition-all text-sm">
+            -
+        </button>
+        <button onclick="resetZoom()" title="Mặc định 100%" class="px-2.5 h-8 flex items-center justify-center hover:bg-purple-100 text-purple-700 font-semibold rounded-full transition-all text-xs">
+            100%
+        </button>
+        <button onclick="zoomIn()" title="Phóng to" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-full transition-all text-sm">
+            +
+        </button>
+    </div>
+
+    <!-- HỘP THÔNG BÁO TÙY CHỈNH (MODAL) -->
     <div id="customModal" class="fixed inset-0 bg-black/50 backdrop-blur-xs hidden items-center justify-center z-50 p-4">
         <div class="bg-white rounded-3xl p-6 max-w-sm w-full shadow-2xl text-center border-2 border-purple-100 animate-in fade-in zoom-in duration-200">
             <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold">
                 <i class="fa-solid fa-sparkles"></i>
             </div>
             <h3 id="modalTitle" class="text-base font-extrabold text-purple-900 mb-2">Thông báo</h3>
-            <p id="modalDesc" class="text-xs text-slate-600 mb-5 leading-relaxed">Nội dung chi tiết sẽ được cập nhật sớm tại đây!</p>
+            <div id="modalDesc" class="text-xs text-slate-600 mb-5 leading-relaxed">Nội dung chi tiết sẽ được cập nhật sớm tại đây!</div>
             <button onclick="closeModal()" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs py-2.5 rounded-xl shadow-md transition-colors">
                 Đóng lại
             </button>
@@ -174,13 +186,32 @@
     </div>
 
     <script>
+        // Xử lý modal thông thường (Png Mode, Model Mode)
         function openModal(modeName) {
             const modal = document.getElementById('customModal');
             const title = document.getElementById('modalTitle');
             const desc = document.getElementById('modalDesc');
             
             title.innerText = modeName;
-            desc.innerText = `Bạn đang xem thông tin chi tiết về chế độ ${modeName} của Giang HeHe.`;
+            desc.innerHTML = `<p class="text-xs text-slate-600 leading-relaxed">Bạn đang xem thông tin chi tiết về chế độ ${modeName} của Giang HeHe.</p>`;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        // Xử lý modal riêng cho QR Code (Phóng to ảnh)
+        function openQRModal() {
+            const modal = document.getElementById('customModal');
+            const title = document.getElementById('modalTitle');
+            const desc = document.getElementById('modalDesc');
+            
+            title.innerText = "QR Donate";
+            desc.innerHTML = `
+                <p class="text-xs text-slate-500 mb-3 font-medium">Quét mã QR để ủng hộ cho Giang HeHe nhé! 💜</p>
+                <div class="bg-purple-50 p-2 rounded-2xl border border-purple-200 inline-block">
+                    <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate To" class="w-60 h-60 object-contain mx-auto rounded-xl">
+                </div>
+            `;
             
             modal.classList.remove('hidden');
             modal.classList.add('flex');
@@ -190,6 +221,32 @@
             const modal = document.getElementById('customModal');
             modal.classList.remove('flex');
             modal.classList.add('hidden');
+        }
+
+        // Xử lý tính năng Zoom phóng to / thu nhỏ toàn trang
+        let currentZoom = 100;
+
+        function updateZoom() {
+            document.body.style.zoom = currentZoom + '%';
+        }
+
+        function zoomIn() {
+            if (currentZoom < 160) { // Giới hạn tối đa 160%
+                currentZoom += 10;
+                updateZoom();
+            }
+        }
+
+        function zoomOut() {
+            if (currentZoom > 70) { // Giới hạn tối thiểu 70%
+                currentZoom -= 10;
+                updateZoom();
+            }
+        }
+
+        function resetZoom() {
+            currentZoom = 100;
+            updateZoom();
         }
     </script>
 </body>
