@@ -15,9 +15,10 @@
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #e0c3fc 0%, #d3b5ed 50%, #c496e8 100%);
             min-height: 100vh;
+            overflow-x: hidden;
         }
         .bg-pattern {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
             background-size: 24px 24px;
         }
         .glass-card {
@@ -28,12 +29,47 @@
         .welcome-box {
             background: linear-gradient(135deg, #a154ec 0%, #8b3cd1 100%);
         }
+
+        /* HIỆU ỨNG HẠT NỀN BAY LƠ LỬNG */
+        .floating-particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatUp 8s infinite linear;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body class="bg-pattern text-slate-800 flex justify-center items-center py-4 px-2 sm:py-8 sm:px-4 relative">
 
+    <!-- CÁC HẠT HIỆU ỨNG NỀN TRÔI LƠ LỬNG -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="floating-particle w-3 h-3 left-[10%]" style="animation-duration: 7s; animation-delay: 0s;"></div>
+        <div class="floating-particle w-2 h-2 left-[25%]" style="animation-duration: 10s; animation-delay: 2s;"></div>
+        <div class="floating-particle w-4 h-4 left-[40%]" style="animation-duration: 6s; animation-delay: 1s;"></div>
+        <div class="floating-particle w-2.5 h-2.5 left-[60%]" style="animation-duration: 9s; animation-delay: 3s;"></div>
+        <div class="floating-particle w-3.5 h-3.5 left-[75%]" style="animation-duration: 8s; animation-delay: 1.5s;"></div>
+        <div class="floating-particle w-2 h-2 left-[90%]" style="animation-duration: 11s; animation-delay: 4s;"></div>
+    </div>
+
     <!-- KHUNG BAO CHỨA CẢ WEB VÀ NÚT ZOOM DỌC CẠNH BÊN -->
-    <div class="relative flex items-center">
+    <div class="relative flex items-center z-10">
 
         <!-- CONTAINER CHÍNH CỦA TRANG WEB -->
         <div class="w-full max-w-md bg-[#edd8f9] rounded-[36px] shadow-2xl border-4 border-white overflow-hidden relative pb-12">
@@ -153,7 +189,7 @@
 
         </div>
 
-        <!-- BỘ NÚT ZOOM DỌC NẰM NGAY CẠNH KHUNG BÊN PHẢI (LUÔN HIỂN THỊ) -->
+        <!-- BỘ NÚT ZOOM DỌC NẰM NGAY CẠNH KHUNG BÊN PHẢI -->
         <div class="flex flex-col items-center bg-white/95 backdrop-blur-md border border-purple-200 shadow-xl rounded-2xl p-2 ml-4 space-y-2 z-40">
             <button onclick="zoomIn()" title="Phóng to" class="w-9 h-9 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-xl transition-all text-base shadow-sm">
                 +
@@ -183,7 +219,6 @@
     </div>
 
     <script>
-        // Xử lý modal thông thường (Png Mode, Model Mode)
         function openModal(modeName) {
             const modal = document.getElementById('customModal');
             const title = document.getElementById('modalTitle');
@@ -196,7 +231,6 @@
             modal.classList.add('flex');
         }
 
-        // Xử lý modal riêng cho QR Code (Phóng to ảnh)
         function openQRModal() {
             const modal = document.getElementById('customModal');
             const title = document.getElementById('modalTitle');
@@ -220,7 +254,6 @@
             modal.classList.add('hidden');
         }
 
-        // Xử lý tính năng Zoom phóng to / thu nhỏ toàn trang
         let currentZoom = 100;
 
         function updateZoom() {
