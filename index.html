@@ -16,7 +16,6 @@
             background: linear-gradient(135deg, #e0c3fc 0%, #d3b5ed 50%, #c496e8 100%);
             min-height: 100vh;
         }
-        /* Custom background pattern mockup */
         .bg-pattern {
             background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
             background-size: 24px 24px;
@@ -31,135 +30,146 @@
         }
     </style>
 </head>
-<body class="bg-pattern text-slate-800 flex justify-center items-center py-4 px-2 sm:py-8 sm:px-4">
+<body class="bg-pattern text-slate-800 flex justify-center items-center py-4 px-2 sm:py-8 sm:px-4 relative">
 
-    <!-- Container tối ưu hóa dạng khung điện thoại / card dọc responsive -->
-    <div class="w-full max-w-md bg-[#edd8f9] rounded-[36px] shadow-2xl border-4 border-white overflow-hidden relative pb-12">
-        
-        <!-- HEADER TOP -->
-        <header class="flex items-center justify-between px-6 pt-6 pb-4">
-            <div class="flex items-center space-x-3">
-                <div class="relative">
-                    <img src="https://placehold.co/120x120/a154ec/ffffff?text=Giang" alt="Avatar Giang HeHe" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md">
-                    <!-- Chấm xanh online -->
-                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-white rounded-full"></span>
-                </div>
-                <div>
-                    <h1 class="font-bold text-base text-purple-950 leading-tight">Giang HeHe</h1>
-                    <p class="text-xs text-purple-700 font-medium">Vtuber Indie</p>
-                </div>
-            </div>
-            <div class="text-xl font-extrabold text-purple-900 tracking-wider">
-                Home
-            </div>
-        </header>
+    <!-- KHUNG BAO CHỨA CẢ WEB VÀ NÚT ZOOM DỌC CẠNH BÊN -->
+    <div class="relative flex items-center">
 
-        <!-- MAIN CONTENT AREA -->
-        <main class="px-5 space-y-5">
+        <!-- CONTAINER CHÍNH CỦA TRANG WEB -->
+        <div class="w-full max-w-md bg-[#edd8f9] rounded-[36px] shadow-2xl border-4 border-white overflow-hidden relative pb-12">
             
-            <!-- KHỐI CHÀO MỪNG LỚN -->
-            <section class="welcome-box rounded-3xl p-5 text-white shadow-lg relative overflow-hidden flex items-center justify-between">
-                <div class="z-10 pr-2 max-w-[65%]">
-                    <h2 class="text-lg font-extrabold leading-snug mb-1.5 drop-shadow-sm">Xin chào, Mình là Giang HeHe</h2>
-                    <p class="text-xs text-purple-100 font-medium leading-relaxed opacity-95">
-                        Chào mừng đến với Giang HeHe. Không gì tuyệt vời hơn việc bạn đã ghé thăm ngày hôm nay! Hãy xem chúng ta có gì ở đây nhé.
-                    </p>
-                </div>
-                <!-- Hình minh họa Chibi góc phải -->
-                <div class="z-10 flex-shrink-0">
-                    <div class="w-24 h-24 bg-white/20 rounded-2xl p-1 backdrop-blur-sm border border-white/40 shadow-inner flex items-center justify-center">
-                        <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true" alt="HeHe">
+            <!-- HEADER TOP -->
+            <header class="flex items-center justify-between px-6 pt-6 pb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="relative">
+                        <img src="https://placehold.co/120x120/a154ec/ffffff?text=Giang" alt="Avatar Giang HeHe" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md">
+                        <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-400 border-2 border-white rounded-full"></span>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-base text-purple-950 leading-tight">Giang HeHe</h1>
+                        <p class="text-xs text-purple-700 font-medium">Vtuber Indie</p>
                     </div>
                 </div>
-                <!-- Hiệu ứng trang trí mờ phía sau -->
-                <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-            </section>
+                <div class="text-xl font-extrabold text-purple-900 tracking-wider">
+                    Home
+                </div>
+            </header>
 
-            <!-- HÀNG 3 THẺ CHỨC NĂNG -->
-            <div class="grid grid-cols-3 gap-3">
+            <!-- MAIN CONTENT AREA -->
+            <main class="px-5 space-y-5">
                 
-                <!-- 1. Thẻ QR Donate (Đã gắn sự kiện click mở popup phóng to) -->
-                <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform">
-                    <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">QR Donate đây ạ!</h3>
-                    <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" onclick="openQRModal()" title="Bấm để phóng to mã QR">
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate">
+                <!-- KHỐI CHÀO MỪNG LỚN -->
+                <section class="welcome-box rounded-3xl p-5 text-white shadow-lg relative overflow-hidden flex items-center justify-between">
+                    <div class="z-10 pr-2 max-w-[65%]">
+                        <h2 class="text-lg font-extrabold leading-snug mb-1.5 drop-shadow-sm">Xin chào, Mình là Giang HeHe</h2>
+                        <p class="text-xs text-purple-100 font-medium leading-relaxed opacity-95">
+                            Chào mừng đến với Giang HeHe. Không gì tuyệt vời hơn việc bạn đã ghé thăm ngày hôm nay! Hãy xem chúng ta có gì ở đây nhé.
+                        </p>
                     </div>
-                    <div class="flex items-center justify-center space-x-1.5 mt-2 text-[10px] font-bold text-slate-500">
-                        <span class="text-red-600 tracking-tighter">VIETQR</span>
-                        <span class="text-blue-600 tracking-tighter">napas247</span>
+                    <div class="z-10 flex-shrink-0">
+                        <div class="w-24 h-24 bg-white/20 rounded-2xl p-1 backdrop-blur-sm border border-white/40 shadow-inner flex items-center justify-center">
+                            <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true" alt="HeHe">
+                        </div>
+                    </div>
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                </section>
+
+                <!-- HÀNG 3 THẺ CHỨC NĂNG -->
+                <div class="grid grid-cols-3 gap-3">
+                    
+                    <!-- 1. Thẻ QR Donate -->
+                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform">
+                        <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">QR Donate đây ạ!</h3>
+                        <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" onclick="openQRModal()" title="Bấm để phóng to mã QR">
+                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate">
+                        </div>
+                        <div class="flex items-center justify-center space-x-1.5 mt-2 text-[10px] font-bold text-slate-500">
+                            <span class="text-red-600 tracking-tighter">VIETQR</span>
+                            <span class="text-blue-600 tracking-tighter">napas247</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Thẻ PNG Mode -->
+                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('PNG Mode')">
+                        <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Png Mode</h3>
+                        <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
+                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png" alt="Png Mode">
+                        </div>
+                        <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
+                    </div>
+
+                    <!-- 3. Thẻ Model Mode -->
+                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('Model Mode')">
+                        <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Model Mode</h3>
+                        <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
+                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png" alt="Model Mode">
+                        </div>
+                        <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
+                    </div>
+
+                </div>
+
+                <!-- TIÊU ĐỀ GIAN HÀNG -->
+                <div class="pt-2 text-center">
+                    <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
+                        Gian Hàng HeHe
                     </div>
                 </div>
 
-                <!-- 2. Thẻ PNG Mode -->
-                <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('PNG Mode')">
-                    <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Png Mode</h3>
-                    <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png" alt="Png Mode">
+                <!-- 3 KHUNG SẢN PHẨM TRỐNG -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </div>
+                        <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 1</span>
                     </div>
-                    <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
-                </div>
-
-                <!-- 3. Thẻ Model Mode -->
-                <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('Model Mode')">
-                    <h3 class="text-[11px] font-extrabold text-purple-900 text-center mb-2 leading-tight">Model Mode</h3>
-                    <div class="w-full bg-purple-50 rounded-xl overflow-hidden border border-purple-100 flex-1 flex items-center justify-center">
-                        <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png" alt="Model Mode">
+                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </div>
+                        <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 2</span>
                     </div>
-                    <span class="text-[10px] font-semibold text-purple-600 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
-                </div>
-
-            </div>
-
-            <!-- TIÊU ĐỀ GIAN HÀNG -->
-            <div class="pt-2 text-center">
-                <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
-                    Gian Hàng HeHe
-                </div>
-            </div>
-
-            <!-- 3 KHUNG SẢN PHẨM / GIAN HÀNG TRỐNG -->
-            <div class="grid grid-cols-3 gap-3">
-                
-                <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-plus text-xs"></i>
+                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                        <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </div>
+                        <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 3</span>
                     </div>
-                    <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 1</span>
                 </div>
 
-                <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-plus text-xs"></i>
-                    </div>
-                    <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 2</span>
+            </main>
+
+            <!-- FOOTER SOCIAL LINKS -->
+            <footer class="mt-6 text-center text-xs text-purple-900/70 font-medium">
+                <div class="flex justify-center space-x-4 mb-2">
+                    <a href="https://www.facebook.com/GiangHeHe23/" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="https://www.youtube.com/@GiangHeHe23" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://discord.com/invite/m4e9fHmEer" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-discord"></i></a>
                 </div>
+                <p>© 2026 Giang HeHe. Made with 💜</p>
+            </footer>
 
-                <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                    <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                        <i class="fa-solid fa-plus text-xs"></i>
-                    </div>
-                    <span class="text-[10px] font-bold text-purple-400 group-hover:text-purple-700">Sản phẩm 3</span>
-                </div>
+        </div>
 
-            </div>
-
-        </main>
-
-        <!-- FOOTER SOCIAL LINKS -->
-        <footer class="mt-6 text-center text-xs text-purple-900/70 font-medium">
-            <div class="flex justify-center space-x-4 mb-2">
-                <a href="https://www.facebook.com/GiangHeHe23/" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-twitch"></i></a>
-                <a href="https://www.youtube.com/@GiangHeHe23" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://discord.com/invite/m4e9fHmEer" target="_blank" class="w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-purple-700 shadow-sm hover:bg-purple-600 hover:text-white transition-all"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <p>© 2026 Giang HeHe. Made with 💜</p>
-        </footer>
+        <!-- BỘ NÚT ZOOM DỌC NẰM NGAY CẠNH KHUNG BÊN PHẢI -->
+        <div class="hidden sm:flex flex-col items-center bg-white/90 backdrop-blur-md border border-purple-200 shadow-lg rounded-2xl p-1.5 ml-3 space-y-1.5 z-40">
+            <button onclick="zoomIn()" title="Phóng to" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-xl transition-all text-sm">
+                +
+            </button>
+            <button onclick="resetZoom()" title="Mặc định 100%" class="w-10 h-8 flex items-center justify-center hover:bg-purple-100 text-purple-700 font-semibold rounded-xl transition-all text-[11px]">
+                100%
+            </button>
+            <button onclick="zoomOut()" title="Thu nhỏ" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-xl transition-all text-sm">
+                -
+            </button>
+        </div>
 
     </div>
 
-    <!-- BỘ NÚT ZOOM PHÓNG TO / THU NHỎ MÀN HÌNH -->
-    <div class="fixed bottom-4 right-4 z-50 flex items-center bg-white/90 backdrop-blur-md border border-purple-200 shadow-lg rounded-full p-1.5 space-x-1">
+    <!-- BỘ NÚT ZOOM DỌC DƯỚI GÓC CHO ĐIỆN THOẠI (HIỆN KHI MÀN HÌNH NHỎ) -->
+    <div class="sm:hidden fixed bottom-4 right-4 z-50 flex items-center bg-white/90 backdrop-blur-md border border-purple-200 shadow-lg rounded-full p-1.5 space-x-1">
         <button onclick="zoomOut()" title="Thu nhỏ" class="w-8 h-8 flex items-center justify-center bg-purple-100 hover:bg-purple-600 hover:text-white text-purple-700 font-bold rounded-full transition-all text-sm">
             -
         </button>
@@ -231,14 +241,14 @@
         }
 
         function zoomIn() {
-            if (currentZoom < 160) { // Giới hạn tối đa 160%
+            if (currentZoom < 160) {
                 currentZoom += 10;
                 updateZoom();
             }
         }
 
         function zoomOut() {
-            if (currentZoom > 70) { // Giới hạn tối thiểu 70%
+            if (currentZoom > 70) {
                 currentZoom -= 10;
                 updateZoom();
             }
