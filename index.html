@@ -104,153 +104,151 @@
                         <p class="text-xs text-purple-700 dark:text-purple-300 font-medium">Vtuber Indie</p>
                     </div>
                 </div>
-                <div class="text-xl font-extrabold text-purple-900 dark:text-purple-200 tracking-wider">
-                    Home
+                <!-- THANH CHUYỂN TAB NGAY TRÊN HEADER -->
+                <div class="flex bg-purple-200/70 dark:bg-purple-950/70 p-1 rounded-full border border-purple-300 dark:border-purple-800 text-[11px] font-bold">
+                    <button id="tabHomeBtn" onclick="switchTab('home')" class="px-3 py-1 rounded-full bg-purple-600 text-white shadow-sm transition-all">Home</button>
+                    <button id="tabScheduleBtn" onclick="switchTab('schedule')" class="px-3 py-1 rounded-full text-purple-900 dark:text-purple-200 transition-all">Lịch</button>
                 </div>
             </header>
 
             <!-- MAIN CONTENT AREA -->
             <main class="px-5 space-y-5">
                 
-                <!-- KHỐI CHÀO MỪNG LỚN -->
-                <section class="welcome-box rounded-3xl p-5 text-white shadow-lg relative overflow-hidden flex items-center justify-between">
-                    <div class="z-10 pr-2 max-w-[65%]">
-                        <h2 class="text-lg font-extrabold leading-snug mb-1.5 drop-shadow-sm">Xin chào, Mình là Giang HeHe</h2>
-                        <p class="text-xs text-purple-100 font-medium leading-relaxed opacity-95">
-                            Chào mừng đến với Giang HeHe. Không gì tuyệt vời hơn việc bạn đã ghé thăm ngày hôm nay! Hãy xem chúng ta có gì ở đây nhé.
-                        </p>
-                    </div>
-                    <div class="z-10 flex-shrink-0">
-                        <div class="w-24 h-24 bg-white/20 rounded-2xl p-1 backdrop-blur-sm border border-white/40 shadow-inner flex items-center justify-center">
-                            <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true" alt="HeHe">
+                <!-- ================= TAB 1: TRANG CHỦ ================= -->
+                <div id="tabHomeContent" class="space-y-5">
+                    <!-- KHỐI CHÀO MỪNG LỚN -->
+                    <section class="welcome-box rounded-3xl p-5 text-white shadow-lg relative overflow-hidden flex items-center justify-between">
+                        <div class="z-10 pr-2 max-w-[65%]">
+                            <h2 class="text-lg font-extrabold leading-snug mb-1.5 drop-shadow-sm">Xin chào, Mình là Giang HeHe</h2>
+                            <p class="text-xs text-purple-100 font-medium leading-relaxed opacity-95">
+                                Chào mừng đến với Giang HeHe. Không gì tuyệt vời hơn việc bạn đã ghé thăm ngày hôm nay! Hãy xem chúng ta có gì ở đây nhé.
+                            </p>
                         </div>
-                    </div>
-                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-                </section>
+                        <div class="z-10 flex-shrink-0">
+                            <div class="w-24 h-24 bg-white/20 rounded-2xl p-1 backdrop-blur-sm border border-white/40 shadow-inner flex items-center justify-center">
+                                <img src="https://github.com/Yanghehe23/gianghehe/blob/main/HeHe.png?raw=true" alt="HeHe">
+                            </div>
+                        </div>
+                        <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                    </section>
 
-                <!-- HÀNG 3 THẺ CHỨC NĂNG -->
-                <div class="grid grid-cols-3 gap-3">
-                    
-                    <!-- 1. Thẻ QR Donate -->
-                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform">
-                        <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">QR Donate đây ạ!</h3>
-                        <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" onclick="openQRModal()" title="Bấm để phóng to mã QR">
-                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate">
+                    <!-- HÀNG 3 THẺ CHỨC NĂNG -->
+                    <div class="grid grid-cols-3 gap-3">
+                        <!-- 1. Thẻ QR Donate -->
+                        <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform">
+                            <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">QR Donate đây ạ!</h3>
+                            <div class="bg-white p-1.5 rounded-xl border border-purple-100 shadow-sm w-full flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity" onclick="openQRModal()" title="Bấm để phóng to mã QR">
+                                <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/qr-donate.png" alt="QR Donate">
+                            </div>
+                            <div class="flex items-center justify-center space-x-1.5 mt-2 text-[10px] font-bold text-slate-500 dark:text-purple-300">
+                                <span class="text-red-600 tracking-tighter">VIETQR</span>
+                                <span class="text-blue-600 dark:text-blue-400 tracking-tighter">napas247</span>
+                            </div>
                         </div>
-                        <div class="flex items-center justify-center space-x-1.5 mt-2 text-[10px] font-bold text-slate-500 dark:text-purple-300">
-                            <span class="text-red-600 tracking-tighter">VIETQR</span>
-                            <span class="text-blue-600 dark:text-blue-400 tracking-tighter">napas247</span>
+
+                        <!-- 2. Thẻ PNG Mode -->
+                        <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('PNG Mode')">
+                            <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">Png Mode</h3>
+                            <div class="w-full bg-purple-50 dark:bg-purple-950/50 rounded-xl overflow-hidden border border-purple-100 dark:border-purple-800 flex-1 flex items-center justify-center">
+                                <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png" alt="Png Mode">
+                            </div>
+                            <span class="text-[10px] font-semibold text-purple-600 dark:text-purple-300 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
+                        </div>
+
+                        <!-- 3. Thẻ Model Mode -->
+                        <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('Model Mode')">
+                            <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">Model Mode</h3>
+                            <div class="w-full bg-purple-50 dark:bg-purple-950/50 rounded-xl overflow-hidden border border-purple-100 dark:border-purple-800 flex-1 flex items-center justify-center">
+                                <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png" alt="Model Mode">
+                            </div>
+                            <span class="text-[10px] font-semibold text-purple-600 dark:text-purple-300 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
                         </div>
                     </div>
 
-                    <!-- 2. Thẻ PNG Mode -->
-                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('PNG Mode')">
-                        <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">Png Mode</h3>
-                        <div class="w-full bg-purple-50 dark:bg-purple-950/50 rounded-xl overflow-hidden border border-purple-100 dark:border-purple-800 flex-1 flex items-center justify-center">
-                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/chibi.png" alt="Png Mode">
+                    <!-- TIÊU ĐỀ GIAN HÀNG -->
+                    <div class="pt-2 text-center">
+                        <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
+                            Gian Hàng HeHe
                         </div>
-                        <span class="text-[10px] font-semibold text-purple-600 dark:text-purple-300 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
                     </div>
 
-                    <!-- 3. Thẻ Model Mode -->
-                    <div class="glass-card rounded-2xl p-3 flex flex-col items-center justify-between shadow-md hover:scale-[1.02] transition-transform cursor-pointer" onclick="openModal('Model Mode')">
-                        <h3 class="text-[11px] font-extrabold text-purple-900 dark:text-purple-200 text-center mb-2 leading-tight">Model Mode</h3>
-                        <div class="w-full bg-purple-50 dark:bg-purple-950/50 rounded-xl overflow-hidden border border-purple-100 dark:border-purple-800 flex-1 flex items-center justify-center">
-                            <img src="https://raw.githubusercontent.com/Yanghehe23/gianghehe/refs/heads/main/model.png" alt="Model Mode">
+                    <!-- 3 KHUNG SẢN PHẨM TRỐNG -->
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </div>
+                            <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 1</span>
                         </div>
-                        <span class="text-[10px] font-semibold text-purple-600 dark:text-purple-300 mt-2 hover:underline">Xem chi tiết <i class="fa-solid fa-chevron-right text-[8px]"></i></span>
-                    </div>
-
-                </div>
-
-                <!-- TIÊU ĐỀ GIAN HÀNG -->
-                <div class="pt-2 text-center">
-                    <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
-                        Gian Hàng HeHe
-                    </div>
-                </div>
-
-                <!-- 3 KHUNG SẢN PHẨM TRỐNG -->
-                <div class="grid grid-cols-3 gap-3">
-                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                        <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-plus text-xs"></i>
+                        <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </div>
+                            <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 2</span>
                         </div>
-                        <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 1</span>
-                    </div>
-                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                        <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-plus text-xs"></i>
+                        <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
+                            <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </div>
+                            <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 3</span>
                         </div>
-                        <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 2</span>
-                    </div>
-                    <div class="glass-card h-36 rounded-2xl flex flex-col items-center justify-center p-3 text-center shadow-sm border border-white/80 hover:border-purple-300 transition-all cursor-pointer group">
-                        <div class="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-2 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-plus text-xs"></i>
-                        </div>
-                        <span class="text-[10px] font-bold text-purple-400 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-200">Sản phẩm 3</span>
-                    </div>
-                </div>
-
-                <!-- TIÊU ĐỀ LỊCH PHÁT SÓNG -->
-                <div class="pt-2 text-center">
-                    <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
-                        Lịch Phát Sóng 🗓️
                     </div>
                 </div>
 
-                <!-- BẢNG LỊCH PHÁT SÓNG 7 NGÀY TRONG TUẦN -->
-                <div class="glass-card rounded-2xl p-3.5 shadow-md space-y-2">
-                    
-                    <!-- Thứ 2 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Hai</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Nghỉ Ngơi</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">///</span>
+                <!-- ================= TAB 2: LỊCH STREAM ================= -->
+                <div id="tabScheduleContent" class="space-y-4 hidden">
+                    <!-- TIÊU ĐỀ LỊCH PHÁT SÓNG -->
+                    <div class="pt-2 text-center">
+                        <div class="inline-block bg-purple-600 text-white font-extrabold text-sm px-6 py-2 rounded-full shadow-md border-2 border-purple-400 uppercase tracking-wider">
+                            Lịch Phát Sóng 🗓️
+                        </div>
                     </div>
 
-                    <!-- Thứ 3 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Ba</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">MuseDash</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
+                    <!-- BẢNG LỊCH PHÁT SÓNG 7 NGÀY TRONG TUẦN -->
+                    <div class="glass-card rounded-2xl p-3.5 shadow-md space-y-2">
+                        <!-- Thứ 2 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Hai</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Nghỉ Ngơi</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">///</span>
+                        </div>
+                        <!-- Thứ 3 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Ba</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">MuseDash</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
+                        </div>
+                        <!-- Thứ 4 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Tư</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Sủi</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">///</span>
+                        </div>
+                        <!-- Thứ 5 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Năm</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Vẽ Vời Vui Vẻ</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
+                        </div>
+                        <!-- Thứ 6 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Sáu</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Nghỉ Ngơi</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">////</span>
+                        </div>
+                        <!-- Thứ 7 -->
+                        <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
+                            <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Bảy</span>
+                            <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Băm Vịt</span>
+                            <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
+                        </div>
+                        <!-- Chủ Nhật -->
+                        <div class="flex items-center justify-between bg-white/40 dark:bg-purple-950/20 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800/50 text-xs opacity-85">
+                            <span class="font-bold text-purple-900/80 dark:text-purple-300/80 w-20">Chủ Nhật</span>
+                            <span class="text-slate-500 dark:text-purple-400/80 flex-1 text-center italic">Nghỉ ngơi / Random</span>
+                            <span class="bg-purple-50 dark:bg-purple-950 text-purple-400 font-bold px-2 py-0.5 rounded-lg text-[10px]">Off/Random</span>
+                        </div>
                     </div>
-
-                    <!-- Thứ 4 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Tư</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Sủi</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">///</span>
-                    </div>
-
-                    <!-- Thứ 5 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Năm</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Vẽ Vời Vui Vẻ</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
-                    </div>
-
-                    <!-- Thứ 6 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Sáu</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Nghỉ Ngơi</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">////</span>
-                    </div>
-
-                    <!-- Thứ 7 -->
-                    <div class="flex items-center justify-between bg-white/60 dark:bg-purple-950/40 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800 text-xs">
-                        <span class="font-bold text-purple-900 dark:text-purple-200 w-20">Thứ Bảy</span>
-                        <span class="text-slate-600 dark:text-purple-300 flex-1 text-center font-medium">Băm Vịt</span>
-                        <span class="bg-purple-100 dark:bg-purple-900/80 text-purple-700 dark:text-purple-200 font-bold px-2 py-0.5 rounded-lg text-[10px]">20:00</span>
-                    </div>
-
-                    <!-- Chủ Nhật -->
-                    <div class="flex items-center justify-between bg-white/40 dark:bg-purple-950/20 px-3 py-2 rounded-xl border border-purple-100 dark:border-purple-800/50 text-xs opacity-85">
-                        <span class="font-bold text-purple-900/80 dark:text-purple-300/80 w-20">Chủ Nhật</span>
-                        <span class="text-slate-500 dark:text-purple-400/80 flex-1 text-center italic">Nghỉ ngơi / Lên sóng ngẫu hứng</span>
-                        <span class="bg-purple-50 dark:bg-purple-950 text-purple-400 font-bold px-2 py-0.5 rounded-lg text-[10px]">Off/Random</span>
-                    </div>
-
                 </div>
 
             </main>
@@ -298,6 +296,28 @@
     </div>
 
     <script>
+        // Xử lý chuyển đổi Tab (Home / Lịch Stream)
+        function switchTab(tabName) {
+            const homeContent = document.getElementById('tabHomeContent');
+            const scheduleContent = document.getElementById('tabScheduleContent');
+            const homeBtn = document.getElementById('tabHomeBtn');
+            const scheduleBtn = document.getElementById('tabScheduleBtn');
+
+            if (tabName === 'home') {
+                homeContent.classList.remove('hidden');
+                scheduleContent.classList.add('hidden');
+                
+                homeBtn.className = "px-3 py-1 rounded-full bg-purple-600 text-white shadow-sm transition-all";
+                scheduleBtn.className = "px-3 py-1 rounded-full text-purple-900 dark:text-purple-200 transition-all";
+            } else {
+                homeContent.classList.add('hidden');
+                scheduleContent.classList.remove('hidden');
+                
+                scheduleBtn.className = "px-3 py-1 rounded-full bg-purple-600 text-white shadow-sm transition-all";
+                homeBtn.className = "px-3 py-1 rounded-full text-purple-900 dark:text-purple-200 transition-all";
+            }
+        }
+
         function openModal(modeName) {
             const modal = document.getElementById('customModal');
             const title = document.getElementById('modalTitle');
